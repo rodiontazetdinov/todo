@@ -1,25 +1,20 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskList (props) {
+function TaskList ({ tasks, onTaskDelete }) {
     return (
         <ul className="todo__list-items">
-            {props.tasks.map((task, idx) => (
+            {tasks.map((task) => (
                     <Task
-                        key={idx}
-                        task={}
-                        link={card.link}
-                        name={card.name}
-                        likes={card.likes}
-                        onCardClick={props.onCardClick}
-                        owner={card.owner._id}
-                        onCardLike={props.onCardLike}
-                        card={card}
-                        onDeleteCard={props.onCardDelete}
-                        onBinClick={props.onBinClick}
+                        key={task._id}
+                        task={task}
+                        status={task.status}
+                        name={task.name}
+                        onTaskDelete={onTaskDelete}
+                        _id={task._id}
                     />
-                ))}
-            <Task className="todo__list-item"/>
+            ))}
+            {/* <Task className="todo__list-item"/> */}
         </ul>
     );
 }
