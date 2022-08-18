@@ -14,7 +14,6 @@ function TaskList ({ tasks, onTaskDelete }) {
                         _id={task._id}
                     />
             ))}
-            {/* <Task className="todo__list-item"/> */}
         </ul>
     );
 }

@@ -33,11 +33,12 @@ body
         transform: scale(1.5, 1.5)
 
 .content
-  height: calc( 100% - 100px )
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
+  background-color: $main-bg-color
+  min-height: calc(100% - 100px)
   &__title
     font-size: $font-size-l
     line-height: 58px
@@ -51,6 +52,7 @@ body
   border-radius: 15px
   display: grid
   grid-template-columns: minmax(100px, 300px) 1fr
+  margin-bottom: 70px
   &__list
     display: flex
     flex-direction: column
@@ -91,6 +93,80 @@ body
       margin: 0
       font-weight: normal
 
+.editor
+  display: flex
+  flex-direction: column
+  padding-top: 15px
+  position: sticky
+  top: 0
+  &__info-wrapper
+    display: flex
+    flex-direction: row
+    margin-bottom: 30px
+  &__title
+    font-size: $font-size-s
+    margin: 0
+    font-weight: normal
+    padding: 4px 0
+    margin-right: 10px
+    word-wrap: break-word
+    overflow: hidden
+    max-width: 80%
+    display: flex
+  &__btn-edit
+    background-color: transparent
+    background-image: url(./images/pencil-icon.svg)
+    background-repeat: no-repeat
+    min-width: 25px
+    height: 25px
+    background-position: center
+    border: 1px solid #fff
+    margin-left: 23px
+    margin-right: 11px
+    &:hover
+        cursor: pointer
+        opacity: 0.6
+  &__btn-save
+    background-color: transparent
+    background-image: url(./images/save-icon-white.png)
+    background-repeat: no-repeat
+    width: 25px
+    height: 25px
+    background-position: center
+    border: 1px solid #fff
+    margin-left: 23px
+    margin-right: 11px
+    background-size: 75%
+    background-position: 4px 3px
+    &:hover
+        cursor: pointer
+        opacity: 0.6
+  &__text
+    font-family: inherit
+    font-size: inherit
+    line-height: inherit
+    margin: 0
+    border: none
+    outline: none
+    margin-left: 5px
+    &_type_description
+      max-width: 450px
+      margin-left: 5px
+      resize: none
+      width: 450px
+      @media screen and (max-width: 1150px)
+        width: 250px
+  &__lable-title
+    align-self: start
+  &__fieldset
+    border: none
+    display: flex
+    flex-direction: column
+  &__label
+    margin-bottom: 10px
+  &__radio
+    margin-right: 5px
+
 .task
   display: flex
   flex-direction: row
@@ -107,6 +183,7 @@ body
     height: 15px
     border-radius: 25%
     margin-right: 10px
+    align-self: center
     &_green
       background-color: #1EA03B
     &_gray
@@ -118,6 +195,9 @@ body
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
+    &:hover
+      cursor: pointer
+      opacity: 0.6
   &__bin
     width: 25px
     height: 25px

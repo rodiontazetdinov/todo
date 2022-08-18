@@ -1,25 +1,15 @@
-// import Task from "./Task";
+import TaskListHeader from "./TaskListHeader";
 import TaskList from "./TaskList";
+import TaskEditor from "./TaskEditor";
 
-function Todo ({ tasks, onTaskDelete }) {
+function Todo ({ tasks, onTaskDelete, onAddTask }) {
     return (
         <div className="todo">
             <div className="todo__list">
-                <div className="todo__list-header">
-                    <h2 className="todo__list-title">List</h2>
-                    <button className="todo__list-add-btn"/>
-                </div>
+                <TaskListHeader onAddTask={onAddTask}/>
                 <TaskList tasks={tasks} onTaskDelete={onTaskDelete}/>
-
             </div>
-            <div className="todo__editor">
-                <div className="todo__list-header">
-                    <h2 className="todo__editor-title">Edit</h2>
-                </div>
-                <div className="todo__editor-description">
-
-                </div>
-            </div>
+            <TaskEditor/>
         </div>
     );
 }
