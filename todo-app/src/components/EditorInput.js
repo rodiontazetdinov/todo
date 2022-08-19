@@ -1,8 +1,8 @@
 import React from "react";
 
-function EditorInput () {
+function EditorInput ({ selectedTask }) {
 
-    const [name, setName] = React.useState('');
+    const [name, setName] = React.useState(selectedTask.name);
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {
@@ -13,6 +13,10 @@ function EditorInput () {
         e.preventDefault();
         setIsEdited(!isEdited);
     }
+
+    React.useEffect(() => {    
+        setName(selectedTask.name);
+      }, [selectedTask]);
 
     return (
         <div className="editor__info-wrapper">

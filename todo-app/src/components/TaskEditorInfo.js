@@ -4,15 +4,15 @@ import EditorInput from "./EditorInput";
 import EditorRadioInput from "./EditorRadioInput";
 import EditorTextArea from "./EditorTextArea";
 
-function TaskEditorInfo ({ selctedTask }) {
+function TaskEditorInfo ({ selectedTask }) {
 
     
 
     return (
         <form className="editor">
-            <EditorInput />
-            <EditorRadioInput />
-            <EditorTextArea />
+            <EditorInput selectedTask={selectedTask}/>
+            <EditorRadioInput selectedTask={selectedTask}/>
+            <EditorTextArea selectedTask={selectedTask}/>
         </form>
     );
 }

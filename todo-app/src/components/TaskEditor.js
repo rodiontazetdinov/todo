@@ -6,7 +6,7 @@ function TaskEditor ({ selectedTask }) {
             <div className="todo__list-header">
                 <h2 className="todo__editor-title">Edit</h2>
             </div>
-            <TaskEditorInfo selctedTask={selectedTask}/>
+            <TaskEditorInfo selectedTask={selectedTask}/>
         </div>
     );
 }

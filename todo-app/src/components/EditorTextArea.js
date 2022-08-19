@@ -1,8 +1,8 @@
 import React from "react";
 
-function EditorTextArea ({ inputType, labelName }) {
+function EditorTextArea ({ selectedTask }) {
 
-    const [description, setDescription] = React.useState('');
+    const [description, setDescription] = React.useState(description => selectedTask.description);
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {
@@ -12,7 +12,12 @@ function EditorTextArea ({ inputType, labelName }) {
     function handleEditBtnClick (e) {
         e.preventDefault();
         setIsEdited(!isEdited);
+        console.log(description);
     }
+
+    React.useEffect(() => {    
+        setDescription(selectedTask.description);
+      }, [selectedTask]);
 
     return (
         <div className="editor__info-wrapper">

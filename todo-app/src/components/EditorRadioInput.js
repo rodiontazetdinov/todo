@@ -3,15 +3,19 @@ import React from "react";
 import Fieldset from "./Fieldset";
 
 
-function EditorInput () {
+function EditorInput ({ selectedTask }) {
 
-    const [status, setStatus] = React.useState('_gray');
+    const [status, setStatus] = React.useState(selectedTask.status);
     const [isEdited, setIsEdited] = React.useState(false);
 
     function handleEditBtnClick (e) {
         e.preventDefault();
         setIsEdited(!isEdited);
     }
+
+    React.useEffect(() => {    
+        setStatus(selectedTask.status);
+      }, [selectedTask]);
 
     return (
         <div className="editor__info-wrapper">

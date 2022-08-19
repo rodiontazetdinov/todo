@@ -9,7 +9,7 @@ function App() {
 
   //создаём стейт, который будет списком тасков
   const [tasks, setTasks] = React.useState([]);
-  const [selectedTask, setSelectedTask] = React.useState({});
+  const [selectedTask, setSelectedTask] = React.useState(firstSelectedTask => data[0]);
 
   const [uniqueId, setUniqueId] = React.useState(data.length);
 
@@ -17,6 +17,10 @@ function App() {
   React.useEffect(() => {    
     setTasks(data);
   }, []);
+
+  // React.useEffect(() => {    
+  //   setSelectedTask();
+  // }, []);
 
   //функция удаляет таск(имитируем запрос на сервер где удалаяем айтем, после чего обновляем стейт тасков)
   function handleTaskDelete (id) {
