@@ -1,6 +1,7 @@
-import TaskEditorInfo from "./TaskEditorInfo";
-import Fieldset from "./Fieldset";
 import React from "react";
+
+import Fieldset from "./Fieldset";
+
 
 function EditorInput () {
 

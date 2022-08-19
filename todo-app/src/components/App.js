@@ -9,6 +9,7 @@ function App() {
 
   //создаём стейт, который будет списком тасков
   const [tasks, setTasks] = React.useState([]);
+  const [selectedTask, setSelectedTask] = React.useState({});
 
   const [uniqueId, setUniqueId] = React.useState(data.length);
 
@@ -31,10 +32,21 @@ function App() {
     
   }
 
+  function handleTaskClick (task) {
+    setSelectedTask(task);
+    console.log('done select');
+  }
+
   return (
     <div className="App">
       <Header/>
-      <Main tasks={tasks} onTaskDelete={handleTaskDelete} onAddTask={handleAddTask}/>
+      <Main 
+        tasks={tasks}
+        selectedTask={selectedTask}
+        onTaskDelete={handleTaskDelete}
+        onAddTask={handleAddTask}
+        onTaskClick={handleTaskClick}
+      />
       <Footer/>
     </div>
   );

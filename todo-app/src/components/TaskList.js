@@ -1,7 +1,7 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskList ({ tasks, onTaskDelete }) {
+function TaskList ({ tasks, onTaskDelete, onTaskClick }) {
     return (
         <ul className="todo__list-items">
             {tasks.map((task) => (
@@ -11,6 +11,7 @@ function TaskList ({ tasks, onTaskDelete }) {
                         status={task.status}
                         name={task.name}
                         onTaskDelete={onTaskDelete}
+                        onTaskClick={onTaskClick}
                         _id={task._id}
                     />
             ))}

@@ -1,10 +1,10 @@
-import Fieldset from "./Fieldset";
 import React from "react";
+
 import EditorInput from "./EditorInput";
 import EditorRadioInput from "./EditorRadioInput";
 import EditorTextArea from "./EditorTextArea";
 
-function TaskEditorInfo () {
+function TaskEditorInfo ({ selctedTask }) {
 
     
 
@@ -13,10 +13,6 @@ function TaskEditorInfo () {
             <EditorInput />
             <EditorRadioInput />
             <EditorTextArea />
-            {/* <div className="editor__info-wrapper">
-                <button className="editor__btn"/>
-                <div className="editor__title">Description :</div>
-            </div> */}
         </form>
     );
 }
