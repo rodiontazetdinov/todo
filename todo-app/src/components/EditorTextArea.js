@@ -2,7 +2,8 @@ import React from "react";
 
 function EditorTextArea ({ selectedTask, description, onDescriptionChange }) {
 
-    // const [description, setDescription] = React.useState(description => selectedTask.description);
+    //компонент меняет "выбранный таск", для того, чтобы всегда был доступ к актуальному
+
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {

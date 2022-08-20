@@ -5,6 +5,8 @@ import Fieldset from "./Fieldset";
 
 function EditorInput ({ selectedTask, status, onStatusChange }) {
 
+    //компонент меняет "выбранный таск", для того, чтобы всегда был доступ к актуальному
+
     const [isEdited, setIsEdited] = React.useState(false);
 
     function handleEditBtnClick (e) {

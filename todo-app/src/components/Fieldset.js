@@ -1,6 +1,8 @@
 
 function Fieldset ({ onSetStatus }) {
 
+    //радио кнопки для изменения статуса таска
+
     function handleStatus (e) {
         onSetStatus(e.target.value);
     }

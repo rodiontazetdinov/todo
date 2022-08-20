@@ -1,6 +1,7 @@
 import React from "react";
 
 function EditorInput ({ selectedTask, name, onNameChange }) {
+    //компонент меняет "выбранный таск", для того, чтобы всегда был доступ к актуальному
 
     //стейт для рендера класса кнопки (сохранить/редактировать)
     const [isEdited, setIsEdited] = React.useState(false);
@@ -15,7 +16,7 @@ function EditorInput ({ selectedTask, name, onNameChange }) {
         setIsEdited(!isEdited);
     }
 
-    
+
     React.useEffect(() => {    
         onNameChange(selectedTask.name);
       }, [selectedTask]);

@@ -6,8 +6,6 @@ import EditorTextArea from "./EditorTextArea";
 
 function TaskEditorInfo ({ selectedTask, ...props }) {
 
-    
-
     return (
         <form className="editor">
             <EditorInput selectedTask={selectedTask} name={props.name} onNameChange={props.onNameChange}/>
