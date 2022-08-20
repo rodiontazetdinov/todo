@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo/static/css/main.4953c78e.css",
+    "main.js": "/todo/static/js/main.b9495782.js",
+    "static/media/Inter-Medium.woff?v=3.19": "/todo/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "/todo/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "/todo/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2?v=3.19": "/todo/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "/todo/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "/todo/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/rtteam.png": "/todo/static/media/rtteam.2608f488ba09458b4536.png",
+    "index.html": "/todo/index.html",
+    "static/media/pencil-icon.svg": "/todo/static/media/pencil-icon.6c7bf05444b9793fdf6e.svg",
+    "static/media/plus_icon.svg": "/todo/static/media/plus_icon.bed8c136e13907f5eefb.svg",
+    "main.4953c78e.css.map": "/todo/static/css/main.4953c78e.css.map",
+    "main.b9495782.js.map": "/todo/static/js/main.b9495782.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4953c78e.css",
+    "static/js/main.b9495782.js"
+  ]
+}
