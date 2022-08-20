@@ -7,4 +7,4 @@ todo React app
     Там можно изменять различные параметры тасака.
     в правом верхнем углу есть кнопка для принятия изменений
 
-## [Ссылка на проект GH-PAGES(<- нажми сюда)](https://rodiontazetdinov.github.io/todo):
+## [Ссылка на проект GH-PAGES(<- нажми сюда)](https://rodiontazetdinov.github.io/todo/):
