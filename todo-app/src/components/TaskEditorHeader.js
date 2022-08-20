@@ -1,7 +1,6 @@
 function TaskEditorHeader ({ onEditedSave }) {
 
     function handleSaveBtnClick () {
-        console.log('saved');
         onEditedSave();
     }
 

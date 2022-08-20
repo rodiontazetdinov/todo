@@ -2,9 +2,6 @@ import React from "react";
 import Task from "./Task";
 
 function TaskList ({ tasks, onTaskDelete, onTaskClick, selectedTask }) {
-    // React.useEffect(() => {
-        
-    // }, [tasks]);
 
     return (
         <ul className="todo__list-items">
