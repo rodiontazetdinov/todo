@@ -1,10 +1,10 @@
 import TaskEditorHeader from "./TaskEditorHeader";
 import TaskEditorInfo from "./TaskEditorInfo";
 
-function TaskEditor ({ selectedTask, onEditedSave, ...props }) {
+function TaskEditor ({ selectedTask, onEditedSave, filterValue, onFilterChange, ...props }) {
     return (
         <div className="todo__editor">
-            <TaskEditorHeader onEditedSave={onEditedSave}/>
+            <TaskEditorHeader onEditedSave={onEditedSave} filterValue={filterValue} onFilterChange={onFilterChange}/>
             <TaskEditorInfo
                 selectedTask={selectedTask}
                 status={props.status}
@@ -13,6 +13,8 @@ function TaskEditor ({ selectedTask, onEditedSave, ...props }) {
                 onNameChange={props.onNameChange}
                 description={props.description}
                 onDescriptionChange={props.onDescriptionChange}
+                onFilterChange={onFilterChange}
+                filterValue={filterValue}
             />
         </div>
     );

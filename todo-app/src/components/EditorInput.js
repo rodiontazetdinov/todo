@@ -2,18 +2,20 @@ import React from "react";
 
 function EditorInput ({ selectedTask, name, onNameChange }) {
 
-    // const [name, setName] = React.useState(selectedTask.name);
+    //стейт для рендера класса кнопки (сохранить/редактировать)
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {
        onNameChange(e.target.value);
     }
 
+    //меняет класс кнопки
     function handleEditBtnClick (e) {
         e.preventDefault();
         setIsEdited(!isEdited);
     }
 
+    
     React.useEffect(() => {    
         onNameChange(selectedTask.name);
       }, [selectedTask]);

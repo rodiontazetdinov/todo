@@ -5,7 +5,6 @@ import Fieldset from "./Fieldset";
 
 function EditorInput ({ selectedTask, status, onStatusChange }) {
 
-    // const [status, setStatus] = React.useState(selectedTask.status);
     const [isEdited, setIsEdited] = React.useState(false);
 
     function handleEditBtnClick (e) {
