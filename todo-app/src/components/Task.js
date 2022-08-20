@@ -1,18 +1,32 @@
 import React from "react";
 
-function Task ({ task, status, name, _id, onTaskDelete, onTaskClick }) {
+function Task ({ task, status, name, _id, onTaskDelete, onTaskClick, selectedTask }) {
 
+    // состояние, которое отражает стиль выбранного элемента
     const [isSelected, setIsSelected] = React.useState(false);
 
     function deleteTask () {
         onTaskDelete(_id);
     }
 
+    // функция передающая таск в компонент App
     function selectTask () {
-        console.log(task);
         onTaskClick(task);
-        setIsSelected(!isSelected);
     }
+
+    // функция, которая подсвечивает выбранный таск
+    function handleTaskStatus (selectedTaskId, id) {
+        if (selectedTaskId === id) {
+            setIsSelected(true);
+        } else {
+            setIsSelected(false);
+        }
+    }
+
+    // эффект, который следит за изменением выбранного таска, чтобы подсветить нужный.
+    React.useEffect(() => {
+        handleTaskStatus(selectedTask._id, _id);
+    }, [selectedTask]);
 
     return (
         <li className={`task${isSelected ? ' task_selected' : ''}`}>

@@ -3,9 +3,9 @@ import React from "react";
 import Fieldset from "./Fieldset";
 
 
-function EditorInput ({ selectedTask }) {
+function EditorInput ({ selectedTask, status, onStatusChange }) {
 
-    const [status, setStatus] = React.useState(selectedTask.status);
+    // const [status, setStatus] = React.useState(selectedTask.status);
     const [isEdited, setIsEdited] = React.useState(false);
 
     function handleEditBtnClick (e) {
@@ -14,7 +14,7 @@ function EditorInput ({ selectedTask }) {
     }
 
     React.useEffect(() => {    
-        setStatus(selectedTask.status);
+        onStatusChange(selectedTask.status);
       }, [selectedTask]);
 
     return (
@@ -23,7 +23,7 @@ function EditorInput ({ selectedTask }) {
                 {isEdited ?
                 <>  
                     <h2 className="editor__title">Status :</h2>
-                    <Fieldset onSetStatus={setStatus}/>
+                    <Fieldset onSetStatus={onStatusChange}/>
                 </>
                      : 
                 <>

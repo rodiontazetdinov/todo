@@ -1,7 +1,11 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskList ({ tasks, onTaskDelete, onTaskClick }) {
+function TaskList ({ tasks, onTaskDelete, onTaskClick, selectedTask }) {
+    // React.useEffect(() => {
+        
+    // }, [tasks]);
+
     return (
         <ul className="todo__list-items">
             {tasks.map((task) => (
@@ -13,6 +17,7 @@ function TaskList ({ tasks, onTaskDelete, onTaskClick }) {
                         onTaskDelete={onTaskDelete}
                         onTaskClick={onTaskClick}
                         _id={task._id}
+                        selectedTask={selectedTask}
                     />
             ))}
         </ul>

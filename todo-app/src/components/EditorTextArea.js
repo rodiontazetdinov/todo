@@ -1,22 +1,21 @@
 import React from "react";
 
-function EditorTextArea ({ selectedTask }) {
+function EditorTextArea ({ selectedTask, description, onDescriptionChange }) {
 
-    const [description, setDescription] = React.useState(description => selectedTask.description);
+    // const [description, setDescription] = React.useState(description => selectedTask.description);
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {
-       setDescription(e.target.value);
+       onDescriptionChange(e.target.value);
     }
 
     function handleEditBtnClick (e) {
         e.preventDefault();
         setIsEdited(!isEdited);
-        console.log(description);
     }
 
     React.useEffect(() => {    
-        setDescription(selectedTask.description);
+        onDescriptionChange(selectedTask.description);
       }, [selectedTask]);
 
     return (

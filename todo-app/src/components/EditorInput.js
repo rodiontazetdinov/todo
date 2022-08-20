@@ -1,12 +1,12 @@
 import React from "react";
 
-function EditorInput ({ selectedTask }) {
+function EditorInput ({ selectedTask, name, onNameChange }) {
 
-    const [name, setName] = React.useState(selectedTask.name);
+    // const [name, setName] = React.useState(selectedTask.name);
     const [isEdited, setIsEdited] = React.useState(false);
     
     function handleInput (e) {
-       setName(e.target.value);
+       onNameChange(e.target.value);
     }
 
     function handleEditBtnClick (e) {
@@ -15,7 +15,7 @@ function EditorInput ({ selectedTask }) {
     }
 
     React.useEffect(() => {    
-        setName(selectedTask.name);
+        onNameChange(selectedTask.name);
       }, [selectedTask]);
 
     return (

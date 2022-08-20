@@ -1,5 +1,5 @@
 
-function Fieldset ({ onSaveBtnClick, onSetStatus }) {
+function Fieldset ({ onSetStatus }) {
 
     function handleStatus (e) {
         onSetStatus(e.target.value);

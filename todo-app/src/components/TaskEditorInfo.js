@@ -4,15 +4,15 @@ import EditorInput from "./EditorInput";
 import EditorRadioInput from "./EditorRadioInput";
 import EditorTextArea from "./EditorTextArea";
 
-function TaskEditorInfo ({ selectedTask }) {
+function TaskEditorInfo ({ selectedTask, ...props }) {
 
     
 
     return (
         <form className="editor">
-            <EditorInput selectedTask={selectedTask}/>
-            <EditorRadioInput selectedTask={selectedTask}/>
-            <EditorTextArea selectedTask={selectedTask}/>
+            <EditorInput selectedTask={selectedTask} name={props.name} onNameChange={props.onNameChange}/>
+            <EditorRadioInput selectedTask={selectedTask} status={props.status} onStatusChange={props.onStatusChange}/>
+            <EditorTextArea selectedTask={selectedTask} description={props.description} onDescriptionChange={props.onDescriptionChange}/>
         </form>
     );
 }
